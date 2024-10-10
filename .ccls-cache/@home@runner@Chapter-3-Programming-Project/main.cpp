@@ -1,25 +1,28 @@
-// Calculating a program that can be used as a math tutor
+// Calculating a report
 #include <iostream>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
-int main()
-
+int main() 
 {
-  int num1, num2;
+  double principal, rate, interest;
+  int timesCompounded;
+
+  cout << "Enter the principal amount: $";
+  cin >> principal;
+  cout << "Enter the interest rate (as a percentage): ";
+  cin >> rate;
+  cout << "Enter the number of times interest is compounded per year: ";
+  cin >> timesCompounded;
   
-  cout << "Enter the first number: ";
-  cin >> num1;
-
-  cout << "Enter the second number: ";
-  cin >> num2;
-
-  cout << num1 << endl;
-  cout << "+" << num2 << endl;
-
-
-  cin.get(); 
-
-  cout << num1 + num2 << endl;
+  interest = principal * (pow((1 + (rate / 100) / timesCompounded), timesCompounded) - 1);
+ 
+  cout << "\nInterest Rate: " << fixed << setprecision(2) << rate << "%" << endl;
+  cout << "Times Compounded: " << timesCompounded << endl;
+  cout << "Principal: $" << fixed << setprecision(2) << principal << endl;
+  cout << "Interest: $" << fixed << setprecision(2) << interest << endl;
+  cout << "Amount in Savings: $" << fixed << setprecision(2) << (principal + interest) << endl;
 
   return 0;
 }
