@@ -1,33 +1,25 @@
-// Calculating number of ingredients needed
+// Calculating a program that can be used as a math tutor
 #include <iostream>
 using namespace std;
 
 int main()
 
 {
-  // Original amounts
-  double sugar = 1.5;
-  double butter = 1;
-  double flour = 2.75;
-  int cookiesPerRecipe = 48;
+  int num1, num2;
+  
+  cout << "Enter the first number: ";
+  cin >> num1;
 
-  int desiredCookies;
-  cout << "How many cookies do you wish to make? ";
-  cin >> desiredCookies;
-  
-  double sugarPerCookie = sugar / cookiesPerRecipe;
-  double butterPerCookie = butter / cookiesPerRecipe;
-  double flourPerCookie = flour / cookiesPerRecipe;
-  
-  double totalSugar = sugarPerCookie * desiredCookies;
-  double totalButter = butterPerCookie * desiredCookies;
-  double totalFlour = flourPerCookie * desiredCookies;
-  
-  cout << "You will need:" << endl;
-  cout << totalSugar << " cups of sugar" << endl;
-  cout << totalButter << " cups of butter" << endl;
-  cout << totalFlour << " cups of flour" << endl;
+  cout << "Enter the second number: ";
+  cin >> num2;
 
+  cout << num1 << endl;
+  cout << "+" << num2 << endl;
+
+
+  cin.get(); 
+
+  cout << num1 + num2 << endl;
 
   return 0;
 }
